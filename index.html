@@ -1,9 +1,10 @@
-<html>
-<head>
-    <script type="text/javascript" src="app.js"> 
-    </script>
-</head>
-
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <title> video Player</title>
+    <script src="app.js"></script>
+    <link rel="stylesheet" type="text/css" href="player.css">
+    </head>
 <body>
     <div id="wrapper">
         <div id="playerWrapper">
@@ -11,7 +12,12 @@
     <source src="video/toby.mp4" type="video/mp4">
             </video>
             <div id="playerControls">
-                
-
-
+                <input type="image" src="images/play.svg" alt="play button" onclick="play_vid()" id="play_button">
+                <input type="image" src="images/pause.svg" alt="pause button" onclick="pause_video()" id="pause_button">
+                <img src="images/volume.svg" alt="volume playerControls" id="vol_img">
+                <input type="range" id="change_vol" onchange="change_vol()" step="0.05" min="0" max="10" value="1">
+            </div>
+        </div>
+    </div>
+</body>
 </html>
